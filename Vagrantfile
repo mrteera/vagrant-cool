@@ -18,5 +18,6 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty32"
   config.vm.synced_folder "cool", "/usr/class/cs143/cool"
+  config.vm.synced_folder "plc-compiler", "/home/vagrant/plc-compiler"
   config.vm.provision "shell", inline: $script
 end
